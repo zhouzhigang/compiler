@@ -9,9 +9,15 @@ Compiler Principle, Design, Implementation and Optimization
 
 ### How to learn?
 
-## Compiler Project
+## Compiler Implementation
+
+### Lexier
+
+### Parser
+
 
 ## Reference
+
 ### Books
 * [Compilers: Principles, Techniques, and Tools](http://dragonbook.stanford.edu)
 * [Modern Compiler Implementaion in C/Java/ML](http://www.cs.princeton.edu/~appel/modern)
@@ -25,6 +31,8 @@ Compiler Principle, Design, Implementation and Optimization
 * [Optimizing Compilers for Mordern Architectures](http://dl.acm.org/citation.cfm?id=502981)
 * [Practical Foundations for Programming Languages](http://www.cs.cmu.edu/~rwh/plbook/book.pdf)
 * [Programming Languages: Application and Interpretation](http://cs.brown.edu/~sk/Publications/Books/ProgLangs)
+* [Writing Compilers And Interpreters - A Software EngineeringApproach](http://infoman.teikav.edu.gr/~stpapad/WritingCompilersAndInterpretersPasscalJVM.pdf)
+
 ### Courses
 * [Compilers - Stanford](https://www/coursera.org/course/compilers)
 * [CS143 Compiler - Stanford](http://web.staford.edu/class/cs143)
@@ -37,6 +45,7 @@ Compiler Principle, Design, Implementation and Optimization
 * [CS548 - Advanced Compiler Design Reading List and Useful Information - DePaul](http://condor.depaul.edu/dmumaugh/readings/CSC548readings.html)
 * [ECE 663 Advanced optimizing Compilers - Purdue](https://engineering.purdue.edu/~eigenman/ECE663)
 * [263-2810: Advanced Compiler Design - ETH](http://www.lst.inf.ethz.ch/teaching/lectures/ss14/2810/)
+
 ### Projects and Tutorial
 * [How to write your own compiler](http://staff.polito.it/silvano.rivoira/HowToWriteYourOwnCompiler.htm)
 * [Les' Build a Compiler by Jack Crenshaw](http://compilers.iecc.com/crenshaw)
