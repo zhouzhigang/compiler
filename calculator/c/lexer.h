@@ -11,7 +11,7 @@ void get_token(Token *token);
 
 /**
  * pass one line string to static variables.
- * @param line [description]
+ * @param line string value of a line
  */
 void set_line(char *line);
 

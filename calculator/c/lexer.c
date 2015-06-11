@@ -99,6 +99,7 @@ void set_line(char *line) {
 }
 
 /*=========== following code is for testing ===========*/
+/*
 void parse_line(char *buf) {
     Token token;// pass the token address in to get the result
 
@@ -121,3 +122,4 @@ int main(int argc, char **argv) {
     }
     return 0;
 }
+*/
