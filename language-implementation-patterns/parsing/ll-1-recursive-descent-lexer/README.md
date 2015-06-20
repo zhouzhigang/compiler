@@ -2,10 +2,17 @@
 
 `Lexer` are also called `scanners`, `lexical analyzers`, and `tokenizers`.
 
-Lexers derive a stream of tokens from a character stream by recognizing lexxical patterns.
+Lexers derive a stream of tokens from a character stream by recognizing lexical patterns.
 
 The goal of a lexer is to emit a sequence of tokens.
+
+## Token
+
 Each token has two primary attributes: a `token type`(symbol category) and the text associated with it.
+
+[Token.java](Token.java)
+
+## Lexer
 
 To build a lexer by hand, we write a method for each token definition(lexical rule).
 In other words, token `T`'s definition becomes method `T()`. eg. `NAME` -> `NAME()`.
@@ -29,8 +36,15 @@ To make the lexer look like an enumeration of tokens, it's handy to define a met
         return <<EOF-token>>; // return token with EOF_TYPE token type
     }
 
+[Lexer.java](Lexer.java)
+[ListLexer.java](ListLexer.java)
+
+## Usage
+
 To use this lexer patter, we create an instance of a lexer from an input string ro stream reader. Our parser object then feeds off this lexer, calling its `nextToken()` method to extract tokens.
 
     MyLexer lexer = new MyLexer("<<input-sentece>>");   // create lexer
     MyParser parser = new MyParser(lexer);              // cater parser
     parser.<<start_rule>>(); // begin parsing, looking for a list sentence
+
+[Test.java](Test.java)

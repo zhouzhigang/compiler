@@ -1,3 +1,10 @@
+/**
+ * Abstract Lexer.
+ * Contains some support code, no code to match detail tokens.
+ *
+ * The nexToken and getTokenName method should be imolemented in concrete Lexer.
+ * 
+ */
 public abstract class Lexer {
     /**
      * Identity for end of file char.
@@ -20,6 +27,10 @@ public abstract class Lexer {
      */
     char c;
 
+    /**
+     * The constructor records the input string,
+     * and primes the lookahead by loading the first character into lookahead character c.
+     */
     public Lexer(String input) {
         this.input = input;
         c = input.charAt(p); // prime lookahead
@@ -37,6 +48,9 @@ public abstract class Lexer {
         }
     }
 
+    /**
+     * Ensure x is the next character on the input stream.
+     */
     public void match(char x) {
         if (c == x) {
             consume();
@@ -45,7 +59,16 @@ public abstract class Lexer {
         }
     }
 
+    /**
+     * Match tokens or routes traffic to the appropriate method.
+     * @return token
+     */
     public abstract Token nextToken();
 
+    /**
+     * To get readable token information or generate good error message.
+     * @param  x token index
+     * @return   token name
+     */
     public abstract String getTokenName(int tokenType);
 }

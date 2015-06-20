@@ -2,7 +2,9 @@
 
 ## Identify Phrase Structure
 Tke `return x + 1;` for example.
+
 `x + 1` plays the role of `expression`;
+
 the entire statement is a `return statement`, which is also a kind of statement.
 
 `if x < 0 then x = 0;`
@@ -95,3 +97,9 @@ ANLTR grammer
     elements    : element (',' element)* ;  // match comma-separated list
     element     : NAME | list;              // element is name or nested list
     NAME        : ('a'..'z'|'A'..'Z')+ ;    // NAME is sequence of >=1 letter
+
+## Tokenizing Sentences
+* [Mapping Grammars to Recursive-Descent Recognizers](parsing/grammar-recursive-descent/README.md)
+* [LL(1) Recursive-Descent Lexer](parsing/ll-1-rescursive-descent-lexer/README.md)
+* [LL(1) Recursive-Descent Parer]()
+* [LL(k) Recursive-Descent parer]()

@@ -1,7 +1,10 @@
 /**
- * List language lexer.
+ * Concrete Lexer: List language lexer.
  * LL(1) Recursive-Descent Lexer.
  *
+ * Token T's definition and corresponding lexical rule method T(), eg. NAME -> NAME().
+ * Concrete nextToken method.
+ * 
  */
 public class ListLexer extends Lexer {
     // detail token type in list language.
@@ -17,11 +20,7 @@ public class ListLexer extends Lexer {
 
     public static String[] tokenNames = {"n/a", "<EOF>", "NAME", "COMMA", "LBRACK", "RBRACK"};
 
-    /**
-     * To get readable token information or generate good error message.
-     * @param  x token index
-     * @return   token name
-     */
+    @Override
     public String getTokenName(int x) {
         return tokenNames[x];
     }
@@ -34,27 +33,26 @@ public class ListLexer extends Lexer {
         super(input);
     }
 
-
-    /**
-     * Match tokens or routes traffic to the appropriate method.
-     * @return token
-     */
+    @Override
     public Token nextToken() {
-        while (c != EOF) {
-            switch (c) {
-                case ' ': case '\t': case '\n':
+        while (c != EOF) { // not EOF
+            
+            // skip comment and other tokens.
+
+            switch (c) { // which token approaches?
+                case ' ': case '\t': case '\n': // skip withespace
                     WS();
                     continue;
-                case ',':
+                case ',': // match ','
                     consume();
                     return new Token(COMMA, ",");
-                case '[':
+                case '[': // match '['
                     consume();
                     return new Token(LBRACK, "[");
-                case ']':
+                case ']': // match '['
                     consume();
                     return new Token(RBRACK, "]");
-                default:
+                default: // match 'NAME'
                     if (isLETTER()) {
                         return NAME();
                     } else {
@@ -65,16 +63,15 @@ public class ListLexer extends Lexer {
         return new Token(EOF_TYPE, "<EOF>");
     }
 
-    // write the method for each token definition(lexical rule).
-    // Token T's definition becomes method T(), eg. NAME -> NAME()
 
     /**
      * NAME/identifier is sequence >= 1 letter.
      * NAME: ('a'..'z'|'A'..'Z')+
-     * @return [description]
+     * @return NAME token
      */
     Token NAME() {
         StringBuilder buf = new StringBuilder();
+        // on or more(...)+ subrules use do-while loops.
         do {
             buf.append(c);
             consume();
