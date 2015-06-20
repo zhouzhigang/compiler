@@ -100,6 +100,6 @@ ANLTR grammer
 
 ## Tokenizing Sentences
 * [Mapping Grammars to Recursive-Descent Recognizers](parsing/grammar-recursive-descent/README.md)
-* [LL(1) Recursive-Descent Lexer](parsing/ll-1-rescursive-descent-lexer/README.md)
-* [LL(1) Recursive-Descent Parer]()
+* [LL(1) Recursive-Descent Lexer](parsing/ll-1-recursive-descent-lexer)
+* [LL(1) Recursive-Descent Parer](parsing/ll-1-recursive-descent-parser)
 * [LL(k) Recursive-Descent parer]()
