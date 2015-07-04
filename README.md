@@ -32,6 +32,7 @@ Compiler Principle, Design, Implementation and Optimization
 * [Practical Foundations for Programming Languages](http://www.cs.cmu.edu/~rwh/plbook/book.pdf)
 * [Programming Languages: Application and Interpretation](http://cs.brown.edu/~sk/Publications/Books/ProgLangs)
 * [Writing Compilers And Interpreters - A Software EngineeringApproach](http://infoman.teikav.edu.gr/~stpapad/WritingCompilersAndInterpretersPasscalJVM.pdf)
+* [LCC - A Retargetable Complier](https://github.com/drh/lcc)
 
 ### Courses
 * [Compilers - Stanford](https://www/coursera.org/course/compilers)
@@ -50,6 +51,7 @@ Compiler Principle, Design, Implementation and Optimization
 * [How to write your own compiler](http://staff.polito.it/silvano.rivoira/HowToWriteYourOwnCompiler.htm)
 * [Les' Build a Compiler by Jack Crenshaw](http://compilers.iecc.com/crenshaw)
 * [An Incremental Approach to Compiler Construction](http://lambda-the-ultimate.org/node/1752)
+* [Tiny C Compiler by Bellard](http://ballard.org/tcc)
 * [Build Your Own Lisp](http://www.buildyourownlistp.com)
 * [Building a Parrot Compiler by Dan Sugalski](http://www.onlamp.com/pub/a/onlamp/2004/04/15/parrot_compiler_construction.html)
 * [Write a Compiler from zero - Chinese](http://zhuanlan.zhihu.com/mosky/19878087)
